@@ -3,9 +3,16 @@
         <h2 class="ff-inter">Meu Mural</h2> 
         <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button>
     </header> 
-    <div class="mural">
+    <div class="mural" *ngIf="listaPensamentos.length > 0, else semPensamentos"> <!--Se a lista de pensamentos for maior que zero, renderiza a div "mural", else aponta para o ng template -->
         <div *ngFor="let pensamento of listaPensamentos">
-            <app-pensamento [pensamento]="pensamento"></app-pensamento>
+            <app-pensamento [pensamento]="pensamento"></app-pensamento> <!-- [pensamentos] = -->
         </div>
     </div>
-</section>
+</section> 
+
+<!--ng-template não é renderizado-->
+<ng-template #semPensamentos> <!--Se a lista de pensamentos for igual a zero, renderiza a div "semPensamentos" -->
+    <div class="ff-inter sem-pensamentos"> 
+        <p>Ainda não há pensamentos cadastrados!</p>
+    </div>
+</ng-template>

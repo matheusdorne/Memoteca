@@ -5,22 +5,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './listar-pensamento.component.html',
   styleUrls: ['./listar-pensamento.component.css']
 })
-export class ListarPensamentoComponent implements OnInit { 
+export class ListarPensamentoComponent implements OnInit {
 
   listaPensamentos = [
-    { 
-      conteudo: 'A vida é bela', 
-      autoria: 'Carlos', 
+    {
+      conteudo: 'Lorem ipsum dolor sit amet',
+      autoria: 'Carlos',
       modelo: 'modelo3'
     },
-    { 
-      conteudo: 'Tenha coragem', 
-      autoria: 'Maria', 
+    {
+      conteudo: 'Lorem ipsum dolor sit amet ',
+      autoria: 'Maria',
       modelo: 'modelo2'
     },
-    { 
-      conteudo: 'valorize a vida', 
-      autoria: 'Juarez', 
+    {
+      conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      autoria: 'Juarez',
       modelo: 'modelo1'
     }
   ]
