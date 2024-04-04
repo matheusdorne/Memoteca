@@ -1,4 +1,6 @@
+import { Pensamento } from './../pensamentos';
 import { Component, OnInit } from '@angular/core';
+import { PensamentoService } from '../pensamento.service';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -7,27 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarPensamentoComponent implements OnInit {
 
-  listaPensamentos = [
-    {
-      conteudo: 'Lorem ipsum dolor sit amet',
-      autoria: 'Carlos',
-      modelo: 'modelo3'
-    },
-    {
-      conteudo: 'Lorem ipsum dolor sit amet ',
-      autoria: 'Maria',
-      modelo: 'modelo2'
-    },
-    {
-      conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      autoria: 'Juarez',
-      modelo: 'modelo1'
-    }
-  ]
+  listaPensamentos: Pensamento[] = [];
 
-  constructor() { }
+  constructor(private service: PensamentoService) //Importa os métodos criados no pensamento.service.ts
+  { }
 
-  ngOnInit(): void {
+  //ngOnInit = método que é chamado quando o componente é inicializado
+  ngOnInit(): void { 
+    //Subscribe = método que recebe um observable e executa uma função quando o observable é resolvido
+  
+
+  this.service.listar().subscribe((listaPensamentos) => {
+             this.listaPensamentos = listaPensamentos
+
+         });
   }
 
 }

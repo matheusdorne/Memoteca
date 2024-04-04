@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Pensamento } from '../pensamentos';
 
 @Component({
   selector: 'app-pensamento',
@@ -7,10 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PensamentoComponent implements OnInit { 
   // @Input() é um decorator que permite que o componente receba dados de outro componente
-  @Input() pensamento = { 
-    conteudo: 'A vida é bela', 
-    autoria: 'Desconhecido', 
-    modelo: 'modelo3'
+  @Input() pensamento: Pensamento = {  
+    id: 0, 
+    conteudo: '', 
+    autoria: '', 
+    modelo: ''
   }
 
   constructor() { }

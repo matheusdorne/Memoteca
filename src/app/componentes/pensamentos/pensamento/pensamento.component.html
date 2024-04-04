@@ -2,16 +2,16 @@
     <!-- [ngClass] = vai recebr o returno da função larguraPensamento,
      que verificar quantidade de caracterez e retorna pensamento-p ou pensamento-g,
       ambas possuem seus formatos definidos no css  -->
-    <img src="/assets/imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas"> 
-    <p class="conteudo">{{ pensamento.conteudo }}</p> 
-    <p class="conteudo"><b>{{ pensamento.autoria }}</b></p>  
-    <div class="acoes"> 
-        <button class="botao-editar"> 
-            <img src="/assets/imagens/icone-editar.png" alt="Ícone de editar">
-        </button>
-        <button class="botao-excluir"> 
-            <img src="/assets/imagens/icone-excluir.png" alt="Ícone de excluir">
-        </button>
-    </div>
+      <img src="/assets/imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas">
+      <p class="conteudo">{{ pensamento.conteudo }}</p>
+      <p class="autoria"><b>{{ pensamento.autoria }}</b></p>  
 
-</div>
+      <div class="acoes">
+        <button class="botao-editar">
+          <img src="/assets/imagens/icone-editar.png" alt="Ícone de editar">
+        </button>
+        <button class="botao-excluir">
+          <img src="/assets/imagens/icone-excluir.png" alt="Ícone de excluir">
+        </button>
+      </div>
+    </div>
